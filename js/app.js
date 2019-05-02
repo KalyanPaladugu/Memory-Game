@@ -73,9 +73,9 @@ function openCard() {
   clickedCards.push(this);
   var len = clickedCards.length;
   var matched=document.querySelectorAll(".match");
-  for(var i=0; i<matched.length; i++){
-  matched[i].classList.add("disabled");
-  }
+//   for(var i=0; i<matched.length; i++){
+//   matched[i].classList.add("disabled");
+//   }
   if (len === 2) {
     moveCounter();
 
@@ -118,14 +118,20 @@ function openCard() {
       for(var i=0; i<cardsList.length; i++){
       cardsList[i].classList.add("disabled");
       }
-      setTimeout(function(){
-        for(var i=0; i<cardsList.length; i++){
-      cardsList[i].classList.remove("disabled");
-        }
-      },300);
+//       setTimeout(function(){
+//         for(var i=0; i<cardsList.length; i++){
+//       cardsList[i].classList.remove("disabled");
+//         }
+//       },300);
       setTimeout(function() {
         clickedCards[0].classList.remove("show", "open", "disabled", "unmatched");
         clickedCards[1].classList.remove("show", "open", "disabled", "unmatched");
+        clickedCards.filter.call(cardsList,function(cardItem){
+        cardItem.classList.remove('disabled');
+          for(var i=0; i<matchedCard.length; i++){
+            matchedCard[i].classList.add('disabled');
+          }
+        })
         clickedCards = [];
       }, 300);
     }
