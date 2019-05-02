@@ -72,18 +72,15 @@ function openCard() {
   time = time + 1;
   clickedCards.push(this);
   var len = clickedCards.length;
-  var matchedCard=document.querySelectorAll(".match");
-//   for(var i=0; i<matched.length; i++){
-//   matched[i].classList.add("disabled");
-//   }
+  var matchedCard = document.querySelectorAll(".match");
   if (len === 2) {
     moveCounter();
 
     /*cards matching if their class name is equal */
     if (clickedCards[0].children[0].classList.item(1) === clickedCards[1].children[0].classList.item(1)) {
       match += 1;
-      clickedCards[0].classList.add("match","disabled");
-      clickedCards[1].classList.add("match","disabled");
+      clickedCards[0].classList.add("match", "disabled");
+      clickedCards[1].classList.add("match", "disabled");
       clickedCards[0].classList.remove("open", "show");
       clickedCards[1].classList.remove("open", "show");
       clickedCards = [];
@@ -115,20 +112,16 @@ function openCard() {
     else {
       clickedCards[0].classList.add("unmatched");
       clickedCards[1].classList.add("unmatched");
-      for(var i=0; i<cardsList.length; i++){
-      cardsList[i].classList.add("disabled");
+      for (var i = 0; i < cardsList.length; i++) {
+        cardsList[i].classList.add("disabled");
       }
-//       setTimeout(function(){
-//         for(var i=0; i<cardsList.length; i++){
-//       cardsList[i].classList.remove("disabled");
-//         }
-//       },300);
+
       setTimeout(function() {
         clickedCards[0].classList.remove("show", "open", "disabled", "unmatched");
         clickedCards[1].classList.remove("show", "open", "disabled", "unmatched");
-        clickedCards.filter.call(cardsList,function(cardItem){
-        cardItem.classList.remove('disabled');
-          for(var i=0; i<matchedCard.length; i++){
+        clickedCards.filter.call(cardsList, function(cardItem) {
+          cardItem.classList.remove('disabled');
+          for (var i = 0; i < matchedCard.length; i++) {
             matchedCard[i].classList.add('disabled');
           }
         })
@@ -147,14 +140,11 @@ function openCard() {
 function moveCounter() {
   moves++;
   counter.innerHTML = moves;
-  if(moves<=10){
-    stars=3;
-}
-
-  else if (moves > 8 && moves < 16) {
+  if (moves <= 10) {
+    stars = 3;
+  } else if (moves > 8 && moves < 16) {
     stars = 2;
     star[2].style.display = "none";
-    //star.innerHTML=document.getElementsByClassName(star[stars]);
   } else if (moves >= 17 && moves <= 20) {
     stars = 1;
     star[1].style.display = "none";
