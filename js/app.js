@@ -112,8 +112,8 @@ function openCard() {
     else {
       clickedCards[0].classList.add("unmatched");
       clickedCards[1].classList.add("unmatched");
-      for(var i=0; i<cardList.length; i++){
-      cardList[i].classList.add("disabled");
+      for(var i=0; i<cardsList.length; i++){
+      cardsList[i].classList.add("disabled");
       }
       setTimeout(function() {
         clickedCards[0].classList.remove("show", "open", "disabled", "unmatched");
