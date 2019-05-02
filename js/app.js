@@ -89,8 +89,7 @@ function openCard() {
         clearInterval(interval);
 
         var span = document.createElement("span");
-        span.inn
-        erHTML = " Star rating: " + (stars + "/3") + "<br>" + " Moves: " + moves + "<br>" + " Time to complete game: " + timer.innerHTML;
+        span.innerHTML = " Star rating: " + (stars + "/3") + "<br>" + " Moves: " + moves + "<br>" + " Time to complete game: " + timer.innerHTML;
         swal({
 
           title: "Good job!",
