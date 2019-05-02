@@ -1,6 +1,7 @@
 # Memory Game Project:
 ==============================
-The main objective of this game to check our memory by selecting pairs of cards with pair of images. In this game we going to learn DOM manipulations using JavaScript including customization of styles and also focusing on JavaScript arrow functions.
+
+ + The main objective of this game to check our memory by selecting pairs of cards with pair of images. In this game we going to learn DOM manipulations using JavaScript including customization of styles and also focusing on JavaScript arrow functions.
 
 
 ## Table of Contents
