@@ -129,6 +129,9 @@ h1 {
     width: 23%;
     margin: 0 0 1% 0;
   }
+  .score-panel {
+    width: 90%;
+  }
 }
 
 /* Media querey for ipad */
