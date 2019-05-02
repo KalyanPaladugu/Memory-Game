@@ -118,7 +118,8 @@ function openCard() {
       setTimeout(function(){
         for(var i=0; i<cardsList.length; i++){
       cardsList[i].classList.remove("disabled");
-      })
+        }
+      },300);
       setTimeout(function() {
         clickedCards[0].classList.remove("show", "open", "disabled", "unmatched");
         clickedCards[1].classList.remove("show", "open", "disabled", "unmatched");
