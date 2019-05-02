@@ -13,7 +13,7 @@ let star = document.querySelectorAll(".fa-star");
 let stars = 3;
 //console.log(star);
 window.onload = gameStart();
-clickedCards = [];
+var clickedCards = [];
 
 
 /*
