@@ -72,7 +72,7 @@ function openCard() {
   time = time + 1;
   clickedCards.push(this);
   var len = clickedCards.length;
-  var matched=document.querySelectorAll(".match");
+  var matchedCard=document.querySelectorAll(".match");
 //   for(var i=0; i<matched.length; i++){
 //   matched[i].classList.add("disabled");
 //   }
