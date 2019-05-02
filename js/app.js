@@ -78,8 +78,8 @@ function openCard() {
     /*cards matching if their class name is equal */
     if (clickedCards[0].children[0].classList.item(1) === clickedCards[1].children[0].classList.item(1)) {
       match += 1;
-      clickedCards[0].classList.add("match");
-      clickedCards[1].classList.add("match");
+      clickedCards[0].classList.add("match","disabled");
+      clickedCards[1].classList.add("match","disabled");
       clickedCards[0].classList.remove("open", "show");
       clickedCards[1].classList.remove("open", "show");
       clickedCards = [];
